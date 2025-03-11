@@ -128,12 +128,20 @@ void excluirElemento()
 	int pos = posicaoElemento(valor);
 
 	if(pos == -1){
-		cout << "O Elemento não foi encontrado";
+		cout << "O Elemento nao foi encontrado";
+		break;
+	}
+
+	if(nElementos == 0){
+		cout << "A Lista esta vazia";
+		break;
 	}
 	
 	for (int i = pos; i < nElementos-1; i++) {
 		lista[i] = lista[i+1];
 	}
+	
+	nElementos = nElementos-1; 
 
 	exibirElementos();
 }
