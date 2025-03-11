@@ -128,13 +128,14 @@ void excluirElemento()
 	int pos = posicaoElemento(valor);
 
 	if(pos == -1){
-		cout << "O número não existe na lista";
+		cout << "O Elemento não foi encontrado";
 	}
 	
 	for (int i = pos; i < nElementos-1; i++) {
-		lista[i] = lista[i+1]
+		lista[i] = lista[i+1];
 	}
-	return lista;
+
+	exibirElementos();
 }
 
 void buscarElemento()
