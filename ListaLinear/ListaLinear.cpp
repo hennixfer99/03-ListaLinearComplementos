@@ -129,12 +129,12 @@ void excluirElemento()
 
 	if(pos == -1){
 		cout << "O Elemento nao foi encontrado";
-		break;
+		return;
 	}
 
 	if(nElementos == 0){
 		cout << "A Lista esta vazia";
-		break;
+		return;
 	}
 	
 	for (int i = pos; i < nElementos-1; i++) {
