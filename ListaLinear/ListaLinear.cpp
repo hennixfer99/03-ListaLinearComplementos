@@ -122,26 +122,27 @@ void inserirElemento()
 
 void excluirElemento()
 {
-	int valor;
-	cout << "Digite o elemento que queira excluir: ";
-	cin >> valor;
-	int pos = posicaoElemento(valor);
+	if (nElementos == 0)
+	{
+		cout << " A lista esta vazia \n";
+		return;
+	}
+
+	int numero;
+	cout << "Digite o numero que queira excluir: ";
+	cin >> numero;
+	int pos = posicaoElemento(numero);
 
 	if(pos == -1){
-		cout << "O Elemento nao foi encontrado";
+		cout << "o numero nao foi encontrado" << endl;
 		return;
 	}
 
-	if(nElementos == 0){
-		cout << "A Lista esta vazia";
-		return;
-	}
-	
 	for (int i = pos; i < nElementos-1; i++) {
-		lista[i] = lista[i+1];
+			lista[i] = lista[i+1];
 	}
-	
-	nElementos = nElementos-1; 
+
+	nElementos = nElementos - 1; 
 
 	exibirElementos();
 }
